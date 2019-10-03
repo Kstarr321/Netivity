@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import syled from "styled-components";
+import styled from "styled-components";
 import {
   Collapse,
   Button,
@@ -14,6 +14,17 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+
+const NavWrapper = styled.div`
+  height: 74px;
+`;
+
+const Wrapper = styled.div`
+  margin-left: 230px;
+  .brand {
+    font-size: 40px;
+  }
+`;
 
 export default class NavBar extends Component {
   constructor(props) {
@@ -31,25 +42,35 @@ export default class NavBar extends Component {
   }
   render() {
     return (
-      <div>
-        <Navbar color="danger" light expand="md">
-          <NavbarBrand href="/">Netivity</NavbarBrand>
+      <NavWrapper>
+        <Navbar color="" light expand="md">
+          <Wrapper>
+            <NavbarBrand href="/" className="brand">
+              Netivity
+            </NavbarBrand>
+          </Wrapper>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/components/">
-                  <Button color="info">About</Button>
+                  <Button color="info" size="lg">
+                    About
+                  </Button>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">
-                  <Button color="info">Services</Button>
+                  <Button color="info" size="lg">
+                    Services
+                  </Button>
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  <Button color="info">More</Button>
+                  <Button color="info" size="lg">
+                    More
+                  </Button>
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>Contact</DropdownItem>
@@ -58,8 +79,9 @@ export default class NavBar extends Component {
               </UncontrolledDropdown>
             </Nav>
           </Collapse>
+          <hr></hr>
         </Navbar>
-      </div>
+      </NavWrapper>
     );
   }
 }
