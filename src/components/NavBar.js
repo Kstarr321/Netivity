@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import logo from "../images/logo.png";
 import {
   Collapse,
   Button,
@@ -16,7 +17,15 @@ import {
 } from "reactstrap";
 
 const NavWrapper = styled.div`
-  height: 74px;
+  height: 100px;
+  background-color: rgb(222, 222, 222);
+  margin-top: 0;
+
+  img {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -46,7 +55,9 @@ export default class NavBar extends Component {
         <Navbar color="" light expand="md">
           <Wrapper>
             <NavbarBrand href="/" className="brand">
-              Netivity
+              <span>
+                <img src={`${logo}`} alt="logo" />
+              </span>
             </NavbarBrand>
           </Wrapper>
           <NavbarToggler onClick={this.toggle} />

@@ -1,22 +1,8 @@
 import React from "react";
-// import "../public/team.svg";
 import sitting from "./images/sitting.svg";
-// import working from "./images/working.svg";
 import team from "./images/team.svg";
 import code from "./images/code.svg";
-// import backdrop from "./images/backdrop.jpg";
-
-import NavBar from "./components/NavBar";
-
-import {
-  Card,
-  CardImg,
-  // CardText,
-  CardBody,
-  CardTitle,
-  // CardSubtitle,
-  Button
-} from "reactstrap";
+import { Card, CardImg, CardBody, CardTitle, Button } from "reactstrap";
 import styled from "styled-components";
 
 const Main = styled.div`
@@ -24,73 +10,33 @@ const Main = styled.div`
   padding: 0;
   box-sizing: border-box;
   height: 100vh;
-
   .title {
     font-size: 28px;
     text-align: center;
   }
 `;
 
-// const Header = styled.div`
-//   /* border-style: solid;
-//   border-color: black; */
-//   height: 50%;
-//   display: grid;
-//   grid-template-columns: 1fr 0.8fr 1fr;
-
-//   .bar {
-//     display: flex;
-//     align-items: center;
-//     div {
-//       width: 100%;
-//       height: 27%;
-//       border-top: 3px solid black;
-//       border-bottom: 3px solid black;
-//     }
-//   }
-
-//   div {
-//     /* border-style: solid;
-//     border-color: black; */
-//   }
-
-//   .profile_picture {
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-image: url("https://media.licdn.com/dms/image/C4E03AQE7PqyMLY5XSw/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=CZdZEkJUNpZiQxG0hKRFiYSTRIXNUPdbOwJLABTEeZc");
-//     border-radius: 40%;
-//   }
-// `;
-
 const Body = styled.div`
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  /* height: 100% flex-direction: column; */
-  /* justify-content: space-around; */ /* height: 50%; */
-  /* border-style: solid;
-  border-color: blue; */
+  grid-template-columns: 0.4fr 1fr;
+  height: 100vh;
   .imaggio {
-    max-height: 200px;
+    max-height: 218px;
     max-width: 100%;
-    background-color: rgb(0, 38, 90);
+    /* border-top: 1px solid white; */
+    /* margin-top: 0.2px; */
+    /* background-color: rgb(0, 38, 90); */
+    background-color: rgb(222, 222, 222);
     color: white;
-    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtuelmpcqtnkV40iphVE58tl357jbL44-k-K-3RoEm3vNjvuL--Q"); */
   }
 
   .splash_page {
-    /* background-image: url("/Users/kstarr/Development/moms_house/src/images/Background.jpg"); */
-    /* border-style: solid;
-    border-color: black; */
-    /* max-height: 97vh; */
     background-repeat: no-repeat;
     background-size: cover;
-    /* object-fit: fill; */
-    /* background-color: rgb(222, 222, 222); */
-    background-image: url("https://static.vecteezy.com/system/resources/previews/000/207/756/original/people-drinking-in-a-busy-bar-vector.jpg");
+    background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/k-63-dsc37345479-paint_2.jpg?auto=format&bg=F4F4F3&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-3.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1200&s=90be6e2a65584ff3499a425e2ee10117");
     .backdrop {
       max-width: 100%;
       height: 93vh;
-      /* object-fit: cover; */
     }
   }
 `;
@@ -99,7 +45,8 @@ export default class App extends React.Component {
   render() {
     return (
       <Main>
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
+        <div></div>
         <Body>
           <div>
             <Card>
@@ -112,11 +59,6 @@ export default class App extends React.Component {
               />
               <CardBody className="imaggio">
                 <CardTitle className="title">IT Staffing Solutions</CardTitle>
-                {/* <CardSubtitle>Card subtitle</CardSubtitle> */}
-                {/* <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </CardText> */}
                 <Button color="info">More</Button>
               </CardBody>
             </Card>
@@ -130,11 +72,7 @@ export default class App extends React.Component {
               />
               <CardBody className="imaggio">
                 <CardTitle className="title">People First Mindset</CardTitle>
-                {/* <CardSubtitle>Card subtitle</CardSubtitle> */}
-                {/* <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </CardText> */}
+
                 <Button color="info">More</Button>
               </CardBody>
             </Card>
@@ -149,18 +87,11 @@ export default class App extends React.Component {
               />
               <CardBody className="imaggio">
                 <CardTitle className="title">Meet the Owner</CardTitle>
-                {/* <CardSubtitle>Card subtitle</CardSubtitle> */}
-                {/* <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </CardText> */}
                 <Button color="info">More</Button>
               </CardBody>
             </Card>
           </div>
-          <div className="splash_page">
-            {/* <img src={`${backdrop}`} alt="hello" className="backdrop"></img> */}
-          </div>
+          <div className="splash_page"></div>
         </Body>
       </Main>
     );
